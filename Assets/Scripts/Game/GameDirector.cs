@@ -253,6 +253,10 @@ public class GameDirector : MonoBehaviour
         speedUpdateEvent.Invoke("GameSpeed", gameDifficulty);
     }
 
+    public void SetShow(string text, bool visibility) {
+        
+    }
+
     // Returns the Mole expiring duration
     public float GetMoleExpiringDuration()
     {

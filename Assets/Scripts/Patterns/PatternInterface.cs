@@ -115,6 +115,17 @@ public class PatternInterface : MonoBehaviour
                     Debug.LogError("Error in RANDGEN: " + e.Message);
                 }
                 break;
+
+            case "SHOW":
+                try
+                {
+                    SetShow(action["TEXT"], action["VISIBLE"]);
+                }
+                catch(System.Exception e)
+                {
+                    Debug.LogError("Error in SHOW: " + e.Message);
+                }
+                break;
         }
     }
 
@@ -202,6 +213,12 @@ public class PatternInterface : MonoBehaviour
     private void SetDifficulty(string difficulty)
     {
         gameDirector.SetDifficulty(difficulty);
+    }
+
+    // Updates the 
+    private void SetShow(string text, string visibility)
+    {
+        gameDirector.SetShow(text, bool.Parse(visibility));
     }
 
     // Updates one or multiple modifiers
